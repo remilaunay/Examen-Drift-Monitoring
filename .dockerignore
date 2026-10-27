@@ -1,0 +1,11 @@
+.git
+.venv
+__pycache__
+*.py[cod]
+*.egg-info
+.env
+README*.md
+data/*
+!data/.gitkeep
+bike_sharing_monitoring
+diagnostic_report.html

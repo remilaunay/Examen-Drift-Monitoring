@@ -1,0 +1,20 @@
+services:
+  monitor-script:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+
+  monitor-ui:
+    image: python:3.12-slim
+    depends_on:
+      monitor-script:
+        condition: service_completed_successfully
+    volumes:
+      - ./bike_sharing_monitoring:/app/bike_sharing_monitoring
+    ports:
+      - "8000:8000"
+    command: >
+      sh -c "pip install --no-cache-dir evidently==0.7.2 &&
+      evidently ui --workspace /app/bike_sharing_monitoring --host 0.0.0.0 --port 8000"

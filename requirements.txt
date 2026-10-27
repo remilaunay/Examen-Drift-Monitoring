@@ -1,0 +1,5 @@
+evidently==0.7.2
+scikit-learn==1.8.0
+pandas==2.3.3
+numpy==2.2.6
+ucimlrepo==0.0.7
