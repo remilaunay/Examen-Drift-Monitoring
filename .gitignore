@@ -1,4 +1,4 @@
-# Python bytecode and local environments
+# Python bytecode, distributions and local environments
 __pycache__/
 *.py[cod]
 *.egg-info/
@@ -6,6 +6,8 @@ __pycache__/
 venv/
 env/
 ENV/
+build/
+dist/
 
 # Local credentials and environment settings
 .env
@@ -18,14 +20,19 @@ ENV/
 /bike_sharing_monitoring/
 /diagnostic_report.html
 
-# Editor and operating system files
-.vscode/
-.idea/
-.DS_Store
-
-# Local caches and logs
+# Test, notebook and tool caches
 .pytest_cache/
 .ruff_cache/
 .mypy_cache/
+.tox/
+.nox/
+.hypothesis/
 .ipynb_checkpoints/
+htmlcov/
+.coverage*
+
+# Editor, operating system files and logs
+.vscode/
+.idea/
+.DS_Store
 *.log
